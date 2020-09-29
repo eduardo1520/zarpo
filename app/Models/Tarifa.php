@@ -14,7 +14,7 @@ class Tarifa extends Model
 
     protected $fillable = ['data_ini','data_fim','preco','estoque','disponivel'];
 
-    protected $hidden = ['created_at','updated_at'];
+    protected $hidden = ['created_at','updated_at','deleted_at'];
 
     protected $dates = ['deleted_at'];
 }
