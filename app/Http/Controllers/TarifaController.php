@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Tarifa;
 
 class TarifaController extends Controller
 {
@@ -13,7 +14,7 @@ class TarifaController extends Controller
      */
     public function index()
     {
-        //
+        echo Tarifa::get();
     }
 
     /**
@@ -35,7 +36,7 @@ class TarifaController extends Controller
      */
     public function show($id)
     {
-        //
+        echo Tarifa::find($id);
     }
 
     /**
@@ -58,6 +59,7 @@ class TarifaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $resultado = Tarifa::find($id)->delete();
+        echo $resultado ? 'Tarifa removida com sucesso' : 'Não foi possível excluír a tarifa';
     }
 }
