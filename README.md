@@ -26,31 +26,31 @@ API simples de gestão de tarifas de um hotel fictício.
 
 - Tela de Login da aplicação
     
-![Optional Text](../zarpo/zarpo/login_zarpo.png)
+![Optional Text](zarpo/login_zarpo.png)
 
 - Tela princial da aplicação
     
-![Optional Text](../zarpo/zarpo/tela_principal_zarpo.png)
+![Optional Text](zarpo/tela_principal_zarpo.png)
 
 - Tela de listagem de Tarifas - URL
 
-![Optional Text](../zarpo/zarpo/tarifas_url.png)
+![Optional Text](zarpo/tarifas_url.png)
 
 - Tela de listagem com intervalo de datas - URL
 
-![Optional Text](../zarpo/zarpo/tarifas_filtro_url.png)
+![Optional Text](zarpo/tarifas_filtro_url.png)
 
 - Soapui - Lista de Tarifas
 
-![Optional Text](../zarpo/zarpo/tarifas.png)
+![Optional Text](zarpo/tarifas.png)
 
 - Soapui - Cadastro de Tarifas
 
-![Optional Text](../zarpo/zarpo/tarifas_cadastro.png)
+![Optional Text](zarpo/tarifas_cadastro.png)
 
 - Soapui - Pesquisa de Tarifas por Código
 
-![Optional Text](../zarpo/zarpo/tarifas_codigo.png)
+![Optional Text](zarpo/tarifas_codigo.png)
 
 - Soapui - Pesquisa de Tarifas por intervalo de data
 
