@@ -15,10 +15,10 @@ class TarifaController extends Controller
      */
     public function index()
     {
-        $ini = $_REQUEST['data_ini'];
-        $fim = $_REQUEST['data_fim'];
+        $ini = !empty($_REQUEST['data_ini']) ? $_REQUEST['data_ini'] : '';
+        $fim = !empty($_REQUEST['data_fim']) ? $_REQUEST['data_fim'] : '';
 
-        if($ini) {
+        if($ini && $fim) {
             $dados = DB::select('select data_ini,data_fim,preco,estoque,disponivel from tarifas where data_ini = ? and data_fim = ?', [$ini,$fim]);
         } else {
             $dados = Tarifa::get();
@@ -70,7 +70,14 @@ class TarifaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request);
+        if(isset($request->preco) && $request->preco != 0) {
+            $dados = DB::update("update tarifas set preco = preco + preco * {$request->preco}/100 where data_ini = ? and data_fim = ? and id = ?", [$request->data_ini, $request->data_fim,$id]);
+            if($dados) {
+                echo " Tarifa atualizada com sucesso!";
+            } else {
+                echo " Erro ao atualizar a tarifa!";
+            }
+        }
     }
 
     /**
